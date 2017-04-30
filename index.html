@@ -28,19 +28,56 @@
 <!-- –––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/handlebars.min-latest.js"></script>
+  <script src="js/data.js"></script>
+
 
 </head>
 <body>
 <!-- –––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<div id="header">
+<section id="header">
   <div class="container">
     <h1>ojo</h1>
     <p>
       good day sir.
     </p>
   </div>
-</div>
+</section>
+
+<section id="thing">
+  <div class="container">
+    <h1>Goedendag</h1>
+    <p>
+      hallo met template.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container" id="poop">
+    <script id="project-template" type="text/x-handlebars-template">
+        {{#each projects}}
+        <div class="project">
+            <div class="bar">
+            <h1>{{title}}</h1>
+            <p class="subTitle">{{subTitle}}</p>
+            </div>
+            <div class="b-stick">
+                <p class="tags">{{tag1}}</p>
+                {{#if tag2}}
+                <p class="tags">{{tag2}}</p>
+                {{/if}}
+                {{#if tag3}}
+                <p class="tags">{{tag3}}</p>
+                {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </script>
+  </div>
+</section>
 
 <!-- –––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
