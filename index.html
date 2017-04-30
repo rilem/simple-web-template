@@ -47,7 +47,7 @@
 </section>
 
 <section id="thing">
-  <div class="container">
+  <div class="container" id="poop">
     <h1>Goedendag</h1>
     <p>
       hallo met template.
@@ -56,28 +56,20 @@
 </section>
 
 <section>
-  <div class="container" id="poop">
-    <script id="project-template" type="text/x-handlebars-template">
-        {{#each projects}}
-        <div class="project">
-            <div class="bar">
-            <h1>{{title}}</h1>
-            <p class="subTitle">{{subTitle}}</p>
-            </div>
-            <div class="b-stick">
-                <p class="tags">{{tag1}}</p>
-                {{#if tag2}}
-                <p class="tags">{{tag2}}</p>
-                {{/if}}
-                {{#if tag3}}
-                <p class="tags">{{tag3}}</p>
-                {{/if}}
-            </div>
-        </div>
-        {{/each}}
-    </script>
+  <div class="container">
+
   </div>
 </section>
+
+<!-- templates -->
+<!-- –––––––––––––––––––––––––––––––––––––––––––––– -->
+<script id="project-template" type="text/x-handlebars-template">
+    {{#projects}}
+    <div class="project">
+      {{title}}
+    </div>
+    {{/projects}}
+</script>
 
 <!-- –––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
